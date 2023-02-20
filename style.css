@@ -1,0 +1,28 @@
+*, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.progress-bar{
+    position :relative;
+    width: 150px;
+    margin: auto;
+
+}
+.progress-bar::after, .number{
+    position :absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.circle{
+    stroke-dasharray: 410;
+    stroke-dashoffset: 410;
+    transform: rotate(-90deg);
+    animation: fill-progress 5s linear forwards;
+}
+@keyframes fill-progress{
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
